@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriFix - Premium Nutribullet Proizvodi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎉 BESPLATNA DOSTAVA za porudžbine preko 3.000 RSD!</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NutriFix</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Glavna</a></li>
+                <li><a href="products.html">Proizvodi</a></li>
+                <li><a href="#dostava">Dostava</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button onclick="toggleSearch()">🔍</button>
+                <button onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Zdravlje u Svakom Gutljaju</h1>
+            <p>Premium Nutribullet proizvodi za vaš zdrav životni stil</p>
+            <a href="products.html" class="btn btn-primary">Pogledaj Proizvode</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600" alt="Nutribullet">
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Izdvojeni Proizvodi</h2>
+            <div class="products-grid" id="featured-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Zašto NutriFix?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚚</div>
+                    <h3>Brza Dostava</h3>
+                    <p>Isporuka u roku od 24-48h</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Originalni Proizvodi</h3>
+                    <p>100% garancija autentičnosti</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💳</div>
+                    <h3>Sigurna Plaćanja</h3>
+                    <p>Pouzeće ili online plaćanje</p>
+                </div>
