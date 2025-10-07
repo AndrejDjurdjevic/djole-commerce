@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proizvodi - NutriFix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p>🎉 BESPLATNA DOSTAVA za porudžbine preko 3.000 RSD!</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">NutriFix</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Glavna</a></li>
+                <li><a href="products.html">Proizvodi</a></li>
+                <li><a href="#dostava">Dostava</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button onclick="toggleSearch()">🔍</button>
+                <button onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Page -->
+    <section class="products-page">
+        <div class="container">
+            <h1>Svi Proizvodi</h1>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Sortiraj:</label>
+                    <select id="sort-select" onchange="sortProducts()">
+                        <option value="default">Podrazumevano</option>
+                        <option value="price-low">Cena: Niska → Visoka</option>
+                        <option value="price-high">Cena: Visoka → Niska</option>
+                        <option value="name">Naziv A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <h2>Poručite Proizvod</h2>
+            
+            <div class="product-summary" id="product-summary">
+                <!-- Product info will be inserted here -->
+            </div>
+
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">Ime *</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Prezime *</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon *</label>
+                    <input type="tel" id="phone" required placeholder="+381 60 123 4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Adresa *</label>
+                    <input type="text" id="address" required placeholder="Ulica i broj">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Grad *
